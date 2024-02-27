@@ -4,8 +4,8 @@ import App from './App.jsx'
 import './index.scss'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import FormLogin from './pages/login/FormLogin.jsx'
-import FormCadastro from './pages/cadastro/FormCadastro.jsx'
+import FormLogin from './pages/FormLogin.jsx'
+import FormCadastro from './pages/FormCadastro.jsx'
 
 const route = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const route = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: 'login',
+        path: '/',
         element: <FormLogin />
       },
       {

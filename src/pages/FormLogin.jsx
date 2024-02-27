@@ -1,4 +1,4 @@
-import "../style.form.scss";
+import "./style.form.scss";
 import BtnSubmit from "../form/BtnSubmit";
 import BtnSocial from "../components/buttonsocial/BtnSocial";
 import InputEmail from "../components/InputEmail";

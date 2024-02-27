@@ -1,4 +1,4 @@
-import "../style.form.scss";
+import "./style.form.scss";
 import BtnSubmit from "../form/BtnSubmit";
 import BtnSocial from "../components/buttonsocial/BtnSocial";
 import Input from "../form/Input";
@@ -29,7 +29,7 @@ export default function FormCadastro() {
         <BtnSocial />
         <div>
           <span>
-            Já tem conta? Faça o <Link to="/login">Login</Link>
+            Já tem conta? Faça o <Link to="/">Login</Link>
           </span>
         </div>
       </form>
