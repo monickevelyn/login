@@ -4,10 +4,9 @@ export default function Input({ type, name, placeholder, id, title, value }){
 
     return(
         <>
-        <div>
-            <label htmlFor={id}> {title}
-                <input type={type} name={name} id={id} placeholder={placeholder} value={value} />
-            </label>
+        <div className="input">
+            <label htmlFor={id}> {title} </label>
+            <input type={type} name={name} id={id} placeholder={placeholder} value={value} />
         </div>
         </>
     )

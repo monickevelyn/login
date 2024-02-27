@@ -1,7 +1,7 @@
 :root {
   --fontcolor: black;
   --offwhite: rgb(239, 237, 237);
-  --colorletter: ;
+  --color: rgb(103, 98, 231);
 }
 
 * {
@@ -11,10 +11,18 @@
   box-sizing: border-box;
 }
 
-form {
-  background-color: var(--offwhite);
-  opacity: 0.5;
-  border-radius: 10px;
+.div-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-evenly;
+  gap: 2em;
+  
+  img {
+    max-width: 600px;
+    min-width: 300px;
+  }
 }
 
 body {
@@ -24,6 +32,6 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 1em;
-  background-color: var(--offwhite);
-  color: var(--fontcolor)
+  background-color: rgb(196, 192, 192);
+  color: var(--fontcolor);
 }
