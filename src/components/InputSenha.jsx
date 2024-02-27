@@ -1,4 +1,5 @@
 import Input from '../form/Input'
+import { FiLock  } from "react-icons/fi";
 
 export default function InputSenha(){
 
@@ -10,6 +11,7 @@ export default function InputSenha(){
             title="Senha"
             name="senha"    
             id="senha"
+            icon={<FiLock className='icon' />}
             // value={e.target.name}
         />
         </>

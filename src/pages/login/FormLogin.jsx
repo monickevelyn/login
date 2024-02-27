@@ -3,11 +3,9 @@ import BtnSubmit from '../../form/BtnSubmit'
 import BtnSocial from '../../components/BtnSocial'
 import InputEmail from '../../components/InputEmail'
 import InputSenha from '../../components/InputSenha'
-
 import { Link } from 'react-router-dom'
 
 export default function FormLogin(){
-
     return(
         <>
         <form>
@@ -16,6 +14,7 @@ export default function FormLogin(){
                 <InputEmail />
                 <InputSenha />
             </div>  
+            
             <BtnSubmit textbtn="Logar" />   
             <BtnSocial />
 
