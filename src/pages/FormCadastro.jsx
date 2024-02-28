@@ -1,6 +1,6 @@
 import "./style.form.scss";
 import BtnSubmit from "../form/BtnSubmit";
-import BtnSocial from "../components/buttonsocial/BtnSocial";
+import BtnGoogle from "../components/btngoogle/BtnGoogle";
 import Input from "../form/Input";
 import InputEmail from "../components/InputEmail";
 import InputSenha from "../components/InputSenha";
@@ -26,7 +26,7 @@ export default function FormCadastro() {
           <InputSenha />
         </div>
         <BtnSubmit textbtn="Cadastrar" />
-        <BtnSocial />
+        <BtnGoogle />
         <div>
           <span>
             Já tem conta? Faça o <Link to="/">Login</Link>

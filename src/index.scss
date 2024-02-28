@@ -1,5 +1,6 @@
 :root {
   --fontcolor: black;
+  --bg: rgb(196, 192, 192);
   --offwhite: rgb(239, 237, 237);
   --color: rgb(103, 98, 231);
   --error: rgba(228, 108, 108, 0.754);
@@ -34,6 +35,6 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 1em;
-  background-color: rgb(196, 192, 192);
+  background-color: var(--bg);
   color: var(--fontcolor);
 }

@@ -1,6 +1,6 @@
 import "./style.form.scss";
 import BtnSubmit from "../form/BtnSubmit";
-import BtnSocial from "../components/buttonsocial/BtnSocial";
+import BtnGoogle from "../components/btngoogle/BtnGoogle";
 import InputEmail from "../components/InputEmail";
 import InputSenha from "../components/InputSenha";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ export default function FormLogin() {
         </div>
 
         <BtnSubmit textbtn="Logar" />
-        <BtnSocial />
+        <BtnGoogle />
 
         <div>
           <span>
