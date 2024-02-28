@@ -1,0 +1,18 @@
+.msg {
+    min-width: 300px;
+    max-width: 500px;
+    color: var(--fontcolor);
+    border-radius: 10px;
+    padding: 0.4em;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 400;
+}
+
+.error {
+    background-color: var(--error);
+}
+
+.sucess {
+    background-color: var(--sucess);
+} 
