@@ -1,33 +1,33 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.scss'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.scss";
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import FormLogin from './pages/FormLogin.jsx'
-import FormCadastro from './pages/FormCadastro.jsx'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Form from "./pages/Form.jsx";
+import Home from "./pages/Home.jsx";
 
 const route = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
       {
-        path: '/',
-        element: <FormLogin />
+        path: "/",
+        element: <Form />,
       },
       {
-        path: 'cadastro',
-        element: <FormCadastro />
-      }
-    ]
-  }
-])
+        path: "home",
+        element: <Home />,
+      },
+    ],
+  },
+]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={route}>
       <App />
     </RouterProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

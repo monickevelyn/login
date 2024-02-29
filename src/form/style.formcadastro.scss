@@ -1,0 +1,35 @@
+form {
+    color: var(--fontcolor);
+    background-color: rgba(255, 255, 255, 0.148);
+    border-radius: 10px;
+    max-width: 500px;
+    min-width: 320px;
+    max-height: 700px;
+    color: var(--fontcolor);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: flex-start ;
+
+    h1 {
+        font-size: 2.4em;
+        font-weight: 600;
+    }    
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        justify-content: flex-start ;
+    }
+
+    a {
+        color: var(--fontcolor);
+    }
+    .icon {
+        font-size: 0.9em;
+    }
+}

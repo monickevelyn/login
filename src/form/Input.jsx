@@ -1,9 +1,6 @@
 import "./style.input.scss"
 import PropType from "prop-types"
-// import { BsEye, BsEyeSlash  } from "react-icons/bs";
-
 export default function Input({ onChange, type, name, placeholder, id, title, icon, value, minLength, maxLength }){
-
     return(
         <>
         <div className="input">
