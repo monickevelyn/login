@@ -1,24 +1,17 @@
+import "./style.btngoogle.scss"
+import { FcGoogle } from "react-icons/fc";
+
 export default function BtnGoogle(){
-    function handleCredentialResponse(response) {
-        console.log("Encoded JWT ID token: " + response.credential);
-    }
-    window.onload = function () {
-        google.accounts.id.initialize({
-          client_id: "431589170556-324luts6d23m39ve9bc1rtkkga2pava5.apps.googleusercontent.com",
-          callback: handleCredentialResponse
-        });
 
-        google.accounts.id.renderButton(
-          document.getElementById("div-btn"),
-          { theme: "outline", size: "large", type: "standard", shape: "pill", text: "continue_with", logo_alignment: "left" }
-        );
-
-        google.accounts.id.prompt();
-    }
-
+  function handleGoogle(){
+    alert("Apenas um botão de efeite <3")
+  }
     return(
         <>
-        <div id="div-btn"></div>       
+        <button className="btn-google" onClick={handleGoogle}>
+          <span><FcGoogle className="icon" /></span>
+          <span>Entrar com o Google</span>
+        </button>    
         </>
     )
 }

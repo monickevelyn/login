@@ -1,0 +1,22 @@
+.btn-google {
+    border: none;
+    background: none;
+    outline: none;
+    background-color: var(--offwhite);
+    border-radius: 15px;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 230px;
+    cursor: pointer;
+
+    .icon{
+        font-size: 22px;
+    }
+
+}

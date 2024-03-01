@@ -67,7 +67,6 @@ export default function FormCadastro() {
   }
 
    const valueInput = (e) => setUser({ ...user, [e.target.name]: e.target.value });
-
  
   return (
     <>
