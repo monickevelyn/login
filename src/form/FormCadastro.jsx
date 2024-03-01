@@ -5,7 +5,6 @@ import BtnSubmit from "./BtnSubmit";
 import BtnGoogle from "../components/btngoogle/BtnGoogle";
 import Input from "./Input";
 import Message from "../components/message/Message";
-
 import { UserContext } from "../context/UserContext";
 import { useContext, useState } from "react";
 
@@ -61,15 +60,15 @@ export default function FormCadastro() {
     )
       return setMsg({
         type: "error",
-        message: "Senha inválida. Deve-se conter no 6 caracteres",
+        message: "Senha inválida. Deve-se conter 6 caracteres",
       });
 
     return true;
   }
 
-  const valueInput = (e) =>
-    setUser({ ...user, [e.target.name]: e.target.value });
+   const valueInput = (e) => setUser({ ...user, [e.target.name]: e.target.value });
 
+ 
   return (
     <>
       <form onSubmit={SubmitCadastro}>
