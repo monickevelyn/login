@@ -14,20 +14,6 @@
   box-sizing: border-box;
 }
 
-.div-body {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content:space-evenly;
-  gap: 2em;
-  
-  img {
-    max-width: 600px;
-    min-width: 300px;
-  }
-}
-
 body {
   margin: auto 0;
   min-width: 320px;

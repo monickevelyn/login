@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     <div className="home">
-      <h1>Olá, {user.nome}</h1>
+      <h1>Olá, <span>{user.nome}</span></h1>
       <img src={imghome} alt="image-home" />
       <a href="https://storyset.com/people">illustrations by Storyset</a>
     </div>     

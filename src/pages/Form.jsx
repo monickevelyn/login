@@ -6,8 +6,10 @@ export default function Form() {
 
   return (
     <>
-    <FormCadastro />
-    <img src={image} alt="img" />      
+    <div className="page-form">
+      <FormCadastro />
+      <img src={image} alt="img" />
+    </div>     
     </>
   );
 }
