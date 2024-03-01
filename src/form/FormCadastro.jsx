@@ -1,22 +1,24 @@
 import "./style.formcadastro.scss";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FiMail, FiLock, FiUser } from "react-icons/fi";
 import BtnSubmit from "./BtnSubmit";
 import BtnGoogle from "../components/btngoogle/BtnGoogle";
 import Input from "./Input";
 import Message from "../components/message/Message";
 
+import { UserContext } from "../context/UserContext";
+import { useContext, useState } from "react";
+
 export default function FormCadastro() {
-  const [dataCadastro, setDataCadastro] = useState({
-    nome: "",
-    email: "",
-    senha: "",
-  });
+
+  const { user, setUser } = useContext(UserContext);
 
   const [msg, setMsg] = useState({
     type: "",
     message: "",
   });
+
+  const navigate = useNavigate();
 
   const SubmitCadastro = async (e) => {
     e.preventDefault();
@@ -30,11 +32,7 @@ export default function FormCadastro() {
         type: "sucess",
         message: "Cadastro feito com sucesso.",
       });
-      setDataCadastro({
-        nome: "",
-        email: "",
-        senha: "",
-      });
+      navigate("/home")
     } else {
       setMsg({
         type: "error",
@@ -44,22 +42,22 @@ export default function FormCadastro() {
   };
 
   function Validate() {
-    if (dataCadastro.nome.length < 3 || !dataCadastro.nome)
+    if (user.nome.length < 3 || !user.nome)
       return setMsg({
         type: "error",
         message: "Nome inválido. Deve-se conter no minímo 3 caracteres",
       });
 
-    if (dataCadastro.email.length < 10 || !dataCadastro.email)
+    if (user.email.length < 10 || !user.email)
       return setMsg({
         type: "error",
         message: "Email inválido. Deve-se conter no minímo 10 caracteres",
       });
 
     if (
-      dataCadastro.senha.length < 6 ||
-      dataCadastro.senha.length > 6 ||
-      !dataCadastro.senha
+      user.senha.length < 6 ||
+      user.senha.length > 6 ||
+      !user.senha
     )
       return setMsg({
         type: "error",
@@ -70,7 +68,7 @@ export default function FormCadastro() {
   }
 
   const valueInput = (e) =>
-    setDataCadastro({ ...dataCadastro, [e.target.name]: e.target.value });
+    setUser({ ...user, [e.target.name]: e.target.value });
 
   return (
     <>
@@ -85,7 +83,7 @@ export default function FormCadastro() {
             name="nome"
             id="nome"
             icon={<FiUser className="icon" />}
-            value={dataCadastro.nome}
+            value={user.nome}
             onChange={valueInput}
           />
 
@@ -96,7 +94,7 @@ export default function FormCadastro() {
             name="email"
             id="email"
             icon={<FiMail className="icon" />}
-            value={dataCadastro.email}
+            value={user.email}
             onChange={valueInput}
           />
 
@@ -107,7 +105,7 @@ export default function FormCadastro() {
             name="senha"
             id="senha"
             icon={<FiLock className="icon" />}
-            value={dataCadastro.senha}
+            value={user.senha}
             onChange={valueInput}
             minLength="6"
             maxLength="6"

@@ -24,10 +24,14 @@ const route = createBrowserRouter([
   },
 ]);
 
+import { UserProvider } from "./context/UserContext.jsx";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={route}>
-      <App />
-    </RouterProvider>
+    <UserProvider>
+      <RouterProvider router={route}>
+        <App />
+      </RouterProvider>
+    </UserProvider>
   </React.StrictMode>
 );
