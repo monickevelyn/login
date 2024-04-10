@@ -6,7 +6,7 @@ const schema = Yup.object().shape({
       .required("Nome é obrigatório"),
     email: 
       Yup.string()
-      .email()
+      .email("E-mail inválido")
       .min(15, 'No minímo 15 caracteres')
       .required("E-mail é obrigatório"),
     senha: 
