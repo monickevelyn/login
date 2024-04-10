@@ -1,7 +1,8 @@
 # Form Login
 
 ### funções
-- validação de formulário
+- formulário com React Hook Form
+- validação de formulário com Yup
 - responsividade
 - estilização em SaaS
 
