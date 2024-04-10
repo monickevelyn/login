@@ -1,6 +1,6 @@
 import "./style.form.scss";
 import image from "../assets/image.svg"
-import FormCadastro from "../form/FormCadastro";
+import FormCadastro from "../components/form/FormCadastro";
 
 export default function Form() {
 

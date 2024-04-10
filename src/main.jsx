@@ -17,21 +17,17 @@ const route = createBrowserRouter([
         element: <Form />,
       },
       {
-        path: "home",
+        path: "home/:id",
         element: <Home />,
       },
     ],
   },
 ]);
 
-import { UserProvider } from "./context/UserContext.jsx";
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <UserProvider>
-      <RouterProvider router={route}>
-        <App />
-      </RouterProvider>
-    </UserProvider>
+   <RouterProvider router={route}>
+      <App />
+    </RouterProvider>
   </React.StrictMode>
 );
